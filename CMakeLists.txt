@@ -77,8 +77,8 @@ add_executable(aoc_2025_app)
 
 target_sources(aoc_2025_app
     PRIVATE
-        "src/main.cpp" "src/utility/day.h" "src/utility/day.cpp" "src/utility/utility.h" "src/utility/io.h" "src/utility/io.cpp" "src/utility/math.h" "src/utility/math.cpp" "src/utility/string.h" "src/utility/string.cpp" "src/utility/vec.h" "src/solutions/all.h"
- "src/solutions/day_1/day_1.h" "src/solutions/day_1/day_1.cpp")
+        "src/main.cpp" "src/utility/day.h" "src/utility/day.cpp" "src/utility/utility.h" "src/utility/io.h" "src/utility/io.cpp" "src/utility/math.h" "src/utility/math.cpp" "src/utility/string.h" "src/utility/string.cpp" "src/utility/vec.h" "src/solutions/all.h" "src/solutions/day_1/day_1.h" "src/solutions/day_1/day_1.cpp" "src/solutions/day_2/day_2.h" "src/solutions/day_2/day_2.cpp"
+)
 
 target_include_directories(aoc_2025_app
     PRIVATE
