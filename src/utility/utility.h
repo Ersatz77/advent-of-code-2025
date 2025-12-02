@@ -49,8 +49,8 @@ namespace aoc
         T result = 0;
         for (const T i : vec)
         {
-            result += i;
             result *= 10;
+            result += i;
         }
 
         return result;
@@ -63,8 +63,8 @@ namespace aoc
         T result = 0;
         for (const T i : arr)
         {
-            result *= 10;
             result += i;
+            result *= 10;
         }
 
         return result;

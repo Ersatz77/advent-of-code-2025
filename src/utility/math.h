@@ -147,6 +147,20 @@ namespace aoc
         return result;
     }
 
+    // Returns the number of digits in a positive integer
+    template<std::integral T>
+    std::size_t digits(const T n)
+    {
+        return static_cast<T>(std::floor(std::log10(n))) + 1;
+    }
+
+    // Returns the digit at an index in a positive integer
+    template<std::integral T>
+    T digit_at(const T n, const std::size_t idx)
+    {
+        return static_cast<T>(n / std::pow(10, idx)) % 10;
+    }
+
     // Concatenates two numbers together Ex: 10 + 3 == 103
     template<std::integral T>
     T concatentate(const T a, const T b)

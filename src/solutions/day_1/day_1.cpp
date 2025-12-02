@@ -1,6 +1,7 @@
 #include "solutions/day_1/day_1.h"
 
 #include <cmath>
+#include <filesystem>
 #include <fstream>
 #include <string>
 
