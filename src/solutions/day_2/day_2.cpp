@@ -71,22 +71,13 @@ namespace aoc
                 continue;
             }
 
-            // Create the chunk from the start of the number to `chunk_length`
-            const std::size_t chunks = num_digits / chunk_length;
-            std::uint64_t chunk = 0;
-            for (std::size_t i = 0; i < chunk_length; ++i)
-            {
-                const std::size_t j = chunk_length - i - 1;
-                chunk *= 10;
-                chunk += digit_at(id, j);
-            }
-
-            // Create a new ID using the chunks
+            // Create a new ID using the chunk length
             std::uint64_t repeating_id = 0;
-            for (std::size_t i = 0; i < chunks; ++i)
+            for (std::size_t i = 0; i < num_digits; ++i)
             {
-                repeating_id *= static_cast<std::uint64_t>(std::pow(10, chunk_length));
-                repeating_id += chunk;
+                const std::size_t j = chunk_length - 1 - (i % chunk_length);
+                repeating_id *= 10;
+                repeating_id += digit_at(id, j);
             }
 
             // Check if both IDs are the same
