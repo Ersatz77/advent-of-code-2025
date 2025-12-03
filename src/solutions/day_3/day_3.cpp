@@ -38,12 +38,12 @@ namespace aoc
         std::size_t start_idx = 0;
         for (std::size_t b = 0; b < num_batteries; ++b)
         {
-            const std::size_t end_idx = num_batteries - 1 - b;
+            const std::size_t end_offset = num_batteries - 1 - b;
 
             // Find the first largest joltage between `start_idx` and `end_idx` (inclusive)
             int max = std::numeric_limits<int>::min();
             std::size_t next_start_idx = 0;
-            for (std::size_t i = start_idx; i <= bank.size() - 1 - end_idx; ++i)
+            for (std::size_t i = start_idx; i <= bank.size() - 1 - end_offset; ++i)
             {
                 if (bank[i] > max)
                 {
