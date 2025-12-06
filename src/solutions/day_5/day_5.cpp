@@ -7,6 +7,7 @@
 #include <ranges>
 #include <string>
 #include <utility>
+#include <vector>
 
 #include "ctre.hpp"
 #include "fmt/format.h"
