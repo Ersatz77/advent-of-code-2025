@@ -24,7 +24,6 @@ namespace aoc
         std::uint64_t start_id = 0;
         std::uint64_t end_id = 0;
         char separator = ' ';
-
         while (file >> start_id >> separator >> end_id)
         {
             ranges.emplace_back(start_id, end_id);
