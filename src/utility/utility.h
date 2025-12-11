@@ -152,9 +152,9 @@ namespace std
     };
 
     template<>
-    struct hash<tuple<string, uint64_t, uint64_t>>
+    struct hash<tuple<string, bool, bool>>
     {
-        std::size_t operator()(const tuple<string, uint64_t, uint64_t>& t) const
+        std::size_t operator()(const tuple<string, bool, bool>& t) const
         {
             std::size_t seed = 0;
             aoc::hash_combine(seed, get<0>(t));
